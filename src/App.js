@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import SideBar from "./components/SideBar";
+import SearchBarHeader from "./components/SearchBarHeader";
+import BodyContainer from "./components/BodyContainer";
 
-function App() {
+export default function IndexPage() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="w-full h-full bg-gray-200">
+        <div className="flex flex-no-wrap">
+          {/* Sidebar starts */}
+          <SideBar></SideBar>
+          {/* Sidebar ends */}
+          <div className="w-full">
+            {/* Navigation starts */}
+            <SearchBarHeader></SearchBarHeader>
+            {/* Navigation ends */}
+            {/* Body starts */}
+            <BodyContainer></BodyContainer>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
-
-export default App;
