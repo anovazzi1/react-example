@@ -1,5 +1,5 @@
 import SideBar from "./components/SideBar";
-import SearchBarHeader from "./components/SearchBarHeader";
+import Header from "./components/Header";
 import BodyContainer from "./components/BodyContainer";
 
 export default function IndexPage() {
@@ -13,7 +13,7 @@ export default function IndexPage() {
           {/* Sidebar ends */}
           <div className="w-full">
             {/* Navigation starts */}
-            <SearchBarHeader></SearchBarHeader>
+            <Header></Header>
             {/* Navigation ends */}
             {/* Body starts */}
             <BodyContainer></BodyContainer>
