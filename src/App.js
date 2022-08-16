@@ -6,7 +6,7 @@ export default function IndexPage() {
 
   return (
     <>
-      <div className="w-full h-full bg-gray-200">
+      <div className="w-full min-h-screen bg-gray-200">
         <div className="flex flex-no-wrap">
           {/* Sidebar starts */}
           <SideBar></SideBar>
