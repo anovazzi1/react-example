@@ -10,7 +10,7 @@ const Table = () => {
             <div className="mx-auto container bg-white dark:bg-gray-800 shadow rounded">
                 <TableOptionsCOntainer></TableOptionsCOntainer>
                 <div className="w-full overflow-x-scroll xl:overflow-x-hidden">
-                    <table style={{"emptyCells": "show;"}} className="min-w-full bg-white dark:bg-gray-800">
+                    <table className="min-w-full bg-white dark:bg-gray-800 overflow-hidden">
                         <TableHeader></TableHeader>
                         <tbody>
                             <TableRow></TableRow>

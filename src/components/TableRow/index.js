@@ -18,7 +18,7 @@ export default function TableRow({data}){
             </HumanLabel>
             <Predictions/>
             <Status color="green"/>
-            <td className="pr-2 relative text-center">
+            <td className="pr-3 relative text-center">
                 <button className="text-gray-500 rounded cursor-pointer border border-transparent focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" onclick="dropdownFunction(this)" className="icon icon-tabler icon-tabler-dots-vertical dropbtn" width={28} height={28} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" />

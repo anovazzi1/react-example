@@ -4,7 +4,7 @@ export default function TableHeader(){
     return (
         <thead>
             <tr className="w-full h-16 border-gray-300 dark:border-gray-200 border-b py-8">
-                <th className="text-gray-600 dark:text-gray-400 font-normal text-center text-sm tracking-normal leading-4">
+                <th className="text-gray-600 pl-2 dark:text-gray-400 font-normal text-center text-sm tracking-normal leading-4">
                     <input type="checkbox" className="cursor-pointer relative w-5 h-5 border rounded border-gray-400 dark:border-gray-200 bg-white dark:bg-gray-800 outline-none" onclick="checkAll(this)" />
                 </th>
                 <th className="text-gray-600 dark:text-gray-400 font-normal text-left text-sm tracking-normal leading-4">
@@ -24,9 +24,9 @@ export default function TableHeader(){
                 <WhiteSpace/>
                 <WhiteSpace/>
                 <th className="text-gray-600 dark:text-gray-400 font-normal pr-6 text-center text-sm tracking-normal leading-4">Human Label</th>
-                <th className="text-gray-600 dark:text-gray-400 font-normal text-left text-sm tracking-normal leading-4">Predictions</th>
+                <th className="text-gray-600 dark:text-gray-400 font-normal text-center text-sm tracking-normal leading-4">Predictions</th>
                 <WhiteSpace/>
-                <td className="text-gray-600 dark:text-gray-400 font-normal pr-2 text-center text-sm tracking-normal leading-4">More</td>
+                <td className="text-gray-600 dark:text-gray-400 font-normal pr-3 text-center text-sm tracking-normal leading-4">More</td>
             </tr>
         </thead>
     )

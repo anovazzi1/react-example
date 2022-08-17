@@ -1,6 +1,6 @@
 export default function TableOptionsCOntainer(){
     return (
-        <div className="flex flex-col lg:flex-row p-4 lg:p-8 justify-between items-start lg:items-stretch w-full">
+        <div className="flex flex-col lg:flex-row pl-4 py-4 lg:pl-8 lg:pb-2 justify-between items-start lg:items-stretch w-full">
                     <div className="w-full lg:w-1/3 flex flex-col lg:flex-row items-start lg:items-center">
                         <div className="flex items-center">
                             <a className="text-gray-600 dark:text-gray-400 p-2 border-transparent border bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-200 cursor-pointer rounded focus:outline-none focus:border-gray-800 focus:shadow-outline-gray" href="javascript: void(0)">
