@@ -1,7 +1,7 @@
-export default function Icon(Children, tailwindClasses){
+export default function Icon({children, tailwindClasses}){
     return (
         <div className={tailwindClasses}>
-            <Children></Children>
+            {children}
         </div>
     )
 }

@@ -42,6 +42,14 @@ export default function NavBar() {
             href="#"
             className="inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
           >
+            Sequence Label
+          </a>
+        </li>
+        <li className="mr-2">
+          <a
+            href="#"
+            className="inline-flex p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
+          >
             Details
           </a>
         </li>
