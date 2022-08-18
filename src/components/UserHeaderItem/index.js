@@ -61,12 +61,12 @@ export default function UserHeaderItem(){
             <div className="relative ml-5">
                 <img
                 className="rounded-full h-10 w-10 object-cover"
-                src="https://tuk-cdn.s3.amazonaws.com/assets/components/sidebar_layout/sl_1.png"
+                src="https://ca.slack-edge.com/T01RA4X4X35-U01RG3UN220-9bcedf54b549-512"
                 alt="avatar"
                 />
             </div>
             </div>
-            <p className="text-gray-800 text-sm mx-3">Jane Doe</p>
+            <p className="text-gray-800 text-sm mx-3">Rodrigo</p>
             <div className="cursor-pointer text-gray-600">
             <svg
                 aria-haspopup="true"

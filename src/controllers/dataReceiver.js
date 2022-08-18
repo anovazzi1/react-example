@@ -10,7 +10,7 @@ export default function getData(index){
     let fetchedData = []
     for(let i=0;i<index;i++)
     {
-        let newData = new Data(i+1,content,humanLabel,predictions,status)
+        let newData = new Data(i,content,humanLabel,predictions,status)
         fetchedData.push(newData)
     }
     return fetchedData
