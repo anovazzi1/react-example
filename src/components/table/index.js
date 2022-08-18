@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import {tableContext} from "../../context/table";
 
 import TableOptionsCOntainer from "../TableOptionsContainer";
 import TableHeader from "../TableHeader";
@@ -7,7 +9,8 @@ import table from "../../controllers/table"
 import getData from "../../controllers/dataReceiver";
 
 export default function Table() {
-    let fetchedData = getData(table.size.big.rowNum).map(data=><TableRow tableSpecs={table.size.big} data={data}/>)
+    const{size} = useContext(tableContext)
+    let fetchedData = getData(table.size[size].rowNum).map(data=><TableRow tableSpecs={table.size[size]} data={data}/>)
 
     return (
         <div className="py-4">

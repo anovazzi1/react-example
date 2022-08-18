@@ -1,8 +1,14 @@
+import { useContext } from "react"
+import { tableContext } from "../../context/table"
+
 export default function TableOptionsCOntainer(){
+    const {size,setSize} = useContext(tableContext)
+    console.log(size)
+
     return (
         <div className="flex flex-col lg:flex-row pl-4 py-4 lg:pl-8 lg:pb-2 justify-between items-start lg:items-stretch w-full">
                     <div className="w-full lg:w-1/3 flex flex-col lg:flex-row items-start lg:items-center">
-                        <div className="flex items-center">
+                        <div className="flex items-center justify-between">
                             <a className="text-gray-600 dark:text-gray-400 p-2 border-transparent border bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-200 cursor-pointer rounded focus:outline-none focus:border-gray-800 focus:shadow-outline-gray" href="javascript: void(0)">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon cursor-pointer icon-tabler icon-tabler-edit" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" />
@@ -52,10 +58,10 @@ export default function TableOptionsCOntainer(){
                                         <polyline points="6 9 12 15 18 9" />
                                     </svg>
                                 </div>
-                                <select aria-label="Selected tab" className="focus:outline-none border border-transparent focus:shadow-outline-gray text-base form-select block w-full py-2 px-2 xl:px-3 rounded text-gray-600 dark:text-gray-400 appearance-none bg-transparent">
-                                    <option>Big Row</option>
-                                    <option>Medium Row</option>
-                                    <option>Small Row</option>
+                                <select aria-label="Selected tab" defaultValue={size} onChange={(e)=>setSize(e.target.value)} className="focus:outline-none border border-transparent focus:shadow-outline-gray text-base form-select block w-full py-2 px-2 xl:px-3 rounded text-gray-600 dark:text-gray-400 appearance-none bg-transparent">
+                                    <option value={"big"}>Big Row</option>
+                                    <option value={"medium"}>Medium Row</option>
+                                    <option value={"small"}>Small Row</option>
                                 </select>
                             </div>
                         </div>

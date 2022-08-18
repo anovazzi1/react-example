@@ -1,12 +1,12 @@
-import Badge from "../../Badge"
+import Badge from "../Badge"
 
 export default function Predictions({tableSpecs,predictions})
 {
     function generateBadges(){
         let badgesList=[]
         let counter = predictions.size
-        if(tableSpecs.predicitionsNum<=predictions.lenght){
-            counter = tableSpecs.predicitionsNum
+        if(tableSpecs.predictionsNum<=predictions.size){
+            counter = tableSpecs.predictionsNum
         }
         for(let i=0;i<counter;i++){
             badgesList.push(

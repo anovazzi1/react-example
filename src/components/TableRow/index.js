@@ -1,4 +1,4 @@
-import Badge from "../../Badge"
+import Badge from "../Badge"
 import Checkbox from "../TableRowComponents/Checkbox"
 import DataIndex from "../TableRowComponents/DataIndex"
 import Content from "../TableRowComponents/Content"
@@ -19,7 +19,7 @@ export default function TableRow({data,tableSpecs}){
                 <Badge name={data.humanLabel.value} color={data.humanLabel.color}></Badge>
             </HumanLabel>
             <Predictions tableSpecs={tableSpecs} predictions={data.predictions}/>
-            <Status color="green"/>
+            <Status color={data.status.color}/>
             <Options></Options>
         </tr>
         </>

@@ -8,8 +8,20 @@ const table = Object.freeze({
             predictionsNum:4,
             
         },
-        medium:{},
-        small:{},
+        medium:{
+            rowHeight:20,
+            rowNum:5,
+            contentTextSize:"lg",
+            contentHeight:16,
+            predictionsNum:3,
+        },
+        small:{
+            rowHeight:12,
+            rowNum:8,
+            contentTextSize:"lg",
+            contentHeight:8,
+            predictionsNum:2
+        },
     }
 })
 
