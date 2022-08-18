@@ -5,29 +5,22 @@ import Content from "../TableRowComponents/Content"
 import HumanLabel from "../TableRowComponents/HumanLabel"
 import Predictions from "../TableRowComponents/Predictions"
 import Status from "../TableRowComponents/Status"
+import Options from "../TableRowComponents/options"
 
-export default function TableRow({data}){
+export default function TableRow({data,tableSpecs}){
+    console.log(data)
     return (
         <>
-        <tr className="h-32 border-gray-300 dark:border-gray-200 border-b">
+        <tr className={`h-${tableSpecs.rowHeight} border-gray-300 dark:border-gray-200 border-b`}>
             <Checkbox/>
-            <DataIndex index={1}/>
-            <Content></Content>
+            <DataIndex index={data.index}/>
+            <Content tableSpecs={tableSpecs} contentData={data.content}></Content>
             <HumanLabel>
-                <Badge name={"Soccer"} color="red"></Badge>
+                <Badge name={data.humanLabel.value} color={data.humanLabel.color}></Badge>
             </HumanLabel>
-            <Predictions/>
+            <Predictions tableSpecs={tableSpecs} predictions={data.predictions}/>
             <Status color="green"/>
-            <td className="pr-3 relative text-center">
-                <button className="text-gray-500 rounded cursor-pointer border border-transparent focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" onclick="dropdownFunction(this)" className="icon icon-tabler icon-tabler-dots-vertical dropbtn" width={28} height={28} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <circle cx={12} cy={12} r={1} />
-                        <circle cx={12} cy={19} r={1} />
-                        <circle cx={12} cy={5} r={1} />
-                    </svg>
-                </button>
-            </td>
+            <Options></Options>
         </tr>
         </>
     )
