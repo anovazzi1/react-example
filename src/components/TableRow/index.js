@@ -8,11 +8,11 @@ import Status from "../TableRowComponents/Status"
 import Options from "../TableRowComponents/options"
 
 export default function TableRow({data,tableSpecs}){
-    console.log(data)
+    data.remove()
+
     return (
-        <>
         <tr className={`h-${tableSpecs.rowHeight} border-gray-300 dark:border-gray-200 border-b`}>
-            <Checkbox/>
+            <Checkbox data={data}/>
             <DataIndex index={data.index}/>
             <Content tableSpecs={tableSpecs} contentData={data.content}></Content>
             <HumanLabel>
@@ -22,6 +22,5 @@ export default function TableRow({data,tableSpecs}){
             <Status color={data.status.color}/>
             <Options></Options>
         </tr>
-        </>
     )
 }

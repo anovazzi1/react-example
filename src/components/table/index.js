@@ -7,11 +7,13 @@ import TableHeader from "../TableHeader";
 import TableRow from "../TableRow";
 import table from "../../controllers/table"
 import getData from "../../controllers/dataReceiver";
+import { dataContext } from "../../context/data";
 
 export default function Table() {
-    const{size} = useContext(tableContext)
-    let fetchedData = getData(table.size[size].rowNum).map(data=><TableRow tableSpecs={table.size[size]} data={data}/>)
-
+    let {size} = useContext(tableContext)
+    let {dataList} =useContext(dataContext)
+    dataList = getData(table.size[size].rowNum)
+    let dataRows = dataList.map(data=><TableRow tableSpecs={table.size[size]} data={data}/>)
     return (
         <div className="py-4">
             <div className="mx-auto container bg-white dark:bg-gray-800 shadow rounded">
@@ -20,7 +22,7 @@ export default function Table() {
                     <table className="min-w-full bg-white dark:bg-gray-800 overflow-hidden">
                         <TableHeader></TableHeader>
                         <tbody>
-                            {[...fetchedData]}
+                            {[...dataRows]}
                         </tbody>
                     </table>
                 </div>

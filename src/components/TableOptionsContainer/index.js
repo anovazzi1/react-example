@@ -2,10 +2,11 @@ import { useContext } from "react"
 import { tableContext } from "../../context/table"
 import Icon from "../Icon"
 import TableIconButton from "../TableIconButton"
+import { dataContext } from "../../context/data"
 
 export default function TableOptionsCOntainer(){
     const {size,setSize, setHighlight,isHighlighted} = useContext(tableContext)
-    console.log(size)
+    const {selectedDataList,dataList} = useContext(dataContext)
 
     return (
         <div className="flex flex-col lg:flex-row pl-4 py-4 lg:pl-8 lg:pb-2 justify-between items-start lg:items-stretch w-full">
@@ -47,7 +48,7 @@ export default function TableOptionsCOntainer(){
                                 </svg>
                             </Icon>
                         </TableIconButton>
-                        <TableIconButton>
+                        <TableIconButton handleClick={()=>selectedDataList.forEach(dataElement => dataElement.remove(dataList))}>
                             <Icon tailwindClasses={"text-red-500"}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="icon cursor-pointer icon-tabler icon-tabler-trash" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" />
