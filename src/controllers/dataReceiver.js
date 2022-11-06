@@ -5,13 +5,12 @@ import {predictions} from "./predictions"
 import { status } from "./status"
 
 export default function getData(index){
-    console.log(content)
     //getDataApi or connection
-    let fetchedData = []
+    let fetchedData = {}
     for(let i=0;i<index;i++)
     {
         let newData = new Data(i,content,humanLabel,predictions,status, true)
-        fetchedData.push(newData)
+        fetchedData[i] = newData
     }
     return fetchedData
 }

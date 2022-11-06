@@ -1,3 +1,4 @@
+
 class Data {
     constructor(index,content,humanLabel, predictions, status, isEnable){
         this.index = index
@@ -8,9 +9,12 @@ class Data {
         this.isSelected =false
         this.isEnable = isEnable
     }
-    remove(dataList) {
+    
+    remove(dataObject) {
         console.log("removing" + this.index)
-
+        if(dataObject.hasOwnProperty(this.index)){
+            delete dataObject[this.index]
+        }
     }
 
 }

@@ -8,7 +8,6 @@ import Status from "../TableRowComponents/Status"
 import Options from "../TableRowComponents/options"
 
 export default function TableRow({data,tableSpecs}){
-    data.remove()
 
     return (
         <tr className={`h-${tableSpecs.rowHeight} border-gray-300 dark:border-gray-200 border-b`}>

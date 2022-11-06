@@ -9,11 +9,13 @@ import table from "../../controllers/table"
 import getData from "../../controllers/dataReceiver";
 import { dataContext } from "../../context/data";
 
+
 export default function Table() {
     let {size} = useContext(tableContext)
-    let {dataList} =useContext(dataContext)
-    dataList = getData(table.size[size].rowNum)
-    let dataRows = dataList.map(data=><TableRow tableSpecs={table.size[size]} data={data}/>)
+    let {dataObject} =useContext(dataContext)
+    dataObject = getData(table.size[size].rowNum)
+    
+    let dataRows = Object.values(dataObject).map(data=><TableRow tableSpecs={table.size[size]} data={data}/>)
     return (
         <div className="py-4">
             <div className="mx-auto container bg-white dark:bg-gray-800 shadow rounded">
